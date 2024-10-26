@@ -44,6 +44,7 @@ module.exports = function verifyTime (timeOfTimes) {
 
             if(workedPeriod >= 300){
                 console.log('El pana trabajo mas de sus 5 horas seguidas')
+                //trabajo mas de 5 horas detener procesosretornar false
                 return false
             }
         }
@@ -55,6 +56,7 @@ module.exports = function verifyTime (timeOfTimes) {
                 console.log('El pana trabajo mas de sus 5 horas seguidas')
                 return false
             }
+            //si no tomo su cena pero no trbajo 5 horas continua 
         } else if (lunchEnd && !dinnerStart){
             console.log('No tomo su hora de cena')
             const workedPeriod = verifyWorkedPeriod(lunchEnd,timeOut)
@@ -78,6 +80,7 @@ module.exports = function verifyTime (timeOfTimes) {
 
 }
 
+//funcion de prueba inicial no usar 
 function verifyTime1(){
 
     console.log(timeOfTimes)
